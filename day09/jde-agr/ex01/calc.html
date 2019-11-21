@@ -1,0 +1,52 @@
+<!doctype <!DOCTYPE html>
+<html>
+<head>
+	<title>Calc Me!</title>
+	<script>
+		setInterval(function(){
+			alert("Please, use me...");
+		}, 30000);
+		function calc() {
+			var n1 = parseInt(document.getElementById("num1").value);
+			var n2 = parseInt(document.getElementById("num2").value);
+			if (n1 < 0 || n2 < 0) {
+				alert("Error :(");
+			} else {
+				var op = document.getElementById("ope").value;
+				if (n2 == 0 && (op == '/' || op == '%')) {
+					alert("It's over 9000!");
+					if (op == '/')
+						console.log(n1 / n2);
+					else console.log(n1 % n2);
+				} else {
+					var ans = 0;
+					if (op == '+')
+						ans = n1 + n2;
+					if (op == '-')
+						ans = n1 - n2;
+					if (op == '*')
+						ans = n1 * n2;
+					if (op == '/')
+						ans = n1 / n2;
+					if (op == '%')
+						ans = n1 % n2;
+					alert(ans);
+					console.log(ans);
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<input id="num1" type="text">
+	<select id="ope">
+		<option value="+">+</option>
+		<option value="-">-</option>
+		<option value="*">*</option>
+		<option value="/">/</option>
+		<option value="%">%</option>
+	</select>
+	<input id="num2" type="text">
+	<input type="submit" value="Try me!" onclick="calc()">
+</body>
+</html>

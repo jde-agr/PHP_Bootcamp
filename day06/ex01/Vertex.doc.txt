@@ -1,0 +1,17 @@
+<- Vertex ----------------------------------------------------------------------
+The Vertex class handles space 3D vertexes.
+It requires three base parameters, namely the x, y and z coordinates
+as well as two optional parameters w (homegenous coordinate) and 
+color.
+
+An instance is contructed from the three x,y,z values:
+new Vertex( array( 'x' => 1.0, 'y' => 0.0, 'z' => 0.0 ) );
+
+An example using the two optional parameters would be:
+new Vertex( array( [x,y,z..] , 'w' => 2.0, 'color' => #instanceOfColor ) );
+Note: default values are 1.0 and white (0xFFFFFF) respectively.
+
+Attributes are private, hence you would need to use getter and setter methods
+to manipulate them.
+No accessable method is providing for this Class.
+---------------------------------------------------------------------- Vertex ->

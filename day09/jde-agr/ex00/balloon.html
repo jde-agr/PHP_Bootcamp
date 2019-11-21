@@ -1,0 +1,41 @@
+<!doctype <!DOCTYPE html>
+<html>
+<head>
+	<title>Balloon Pop</title>
+	<script>
+		var size = 200;
+		var nr_clicks = 0;
+		function inc_size() {
+			size += 10;
+			if (size > 420)
+				size = 200;
+			nr_clicks++;
+			draw_shape(size, nr_clicks);
+		}
+		function dec_size() {
+			size -= 5;
+			if (size < 200)
+				size = 200;
+			nr_clicks--;
+			draw_shape(size, nr_clicks);
+		}
+		function draw_shape(size, nr_clicks) {
+			var c = nr_clicks;
+			if (c < 0)
+				c *= -1;
+			if (c%3 == 1)
+				document.getElementById("balloon").style.backgroundColor = 'green';
+			else if (c%3 == 2)
+				document.getElementById("balloon").style.backgroundColor = 'blue'
+			else
+				document.getElementById("balloon").style.backgroundColor = 'red';
+			document.getElementById("balloon").style.height = size + 'px';
+			document.getElementById("balloon").style.width = size + 'px';
+			document.getElementById("balloon").style.borderRadius = size/2 + 'px';
+		}
+	</script>
+</head>
+<body>
+	<div id="balloon" style="background-color: red; border-radius: 100px; height: 200px; width: 200px;" onclick="inc_size()" onmouseout="dec_size()"></div>
+</body>
+</html>

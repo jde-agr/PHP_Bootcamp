@@ -1,0 +1,15 @@
+Useful variables
+    $_GET
+    $_COOKIE
+    $_SERVER
+    website -> https://www.w3schools.com/php/php_superglobals.asp
+
+Useful websites
+    ex02, ex03  -> http://form.guide/php-form/php-form-get.html
+    ex06        -> http://php.net/manual/en/features.http-auth.php
+
+Functions such as
+    header(...)
+    readfile(...)
+    file_get_contents(...)
+all can be searched at php.net
